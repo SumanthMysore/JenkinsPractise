@@ -61,7 +61,7 @@ const Home: React.FC = () => {
     <StyledWrapper>
       <StyledDiv>
         <StyledHeading variant="h1" color="greyCharcoal.main" data-cy="heading">
-          Personalized Learning Journeys
+          Personalized Learning Journeys...
         </StyledHeading>
         <StyledTypography color="greySlate.main" data-cy="sub-text">
           Learning journeys mapped and recommended based on your grade, learning
