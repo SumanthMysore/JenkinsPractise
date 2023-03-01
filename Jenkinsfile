@@ -28,7 +28,7 @@ pipeline {
         
         stage('Pushing backend docker image') {
             steps {
-                withCredentials([gitUsernamePassword(credentialsId: 'github_credentials', gitToolName: 'Default')]) {
+                withCredentials([gitUsernamePassword(credentialsId: 'ghcr_pat', gitToolName: 'Default')]) {
                     sh 'docker push ${be_image}'
                 }
             }
@@ -60,7 +60,7 @@ pipeline {
         
         stage('Pushing frontend docker image') {
             steps {
-                withCredentials([gitUsernamePassword(credentialsId: 'github_credentials', gitToolName: 'Default')]) {
+                withCredentials([gitUsernamePassword(credentialsId: 'ghcr_pat', gitToolName: 'Default')]) {
                     sh 'docker push ${fe_image}'
                 }
             }
